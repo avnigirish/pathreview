@@ -21,7 +21,7 @@ The repo analysis feature currently doesn't detect whether a repository has any 
 
 ## Week 8 — Reproduction & solution planning
 
-**Reproduction commit link:** [to be added after push]
+**Reproduction commit link:** https://github.com/avnigirish/pathreview/commit/5731dce5a7c37eee665759267b6821940c56f005
 
 **Reproduction summary:**
 `GitHubTool._fetch_repo_metadata` returns a metadata dict that includes `has_readme` but not `has_tests` — the field simply doesn't exist in the output. I confirmed this by writing a failing unit test (`tests/unit/test_github_tool.py`) that asserts `has_tests` is present in `result.data`; it fails on the current code with a `KeyError`/assertion error, pinpointing exactly where the gap lives.
