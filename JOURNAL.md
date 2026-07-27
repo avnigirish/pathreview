@@ -32,3 +32,36 @@ The repo analysis feature currently doesn't detect whether a repository has any 
 
 **Blockers or open questions:**
 Need to confirm that `httpx.head` works correctly against GitHub's Contents API for directory paths (not just files) — will verify during implementation.
+
+---
+
+## Week 9 — Solution building & PR submission
+
+### Check-in 1 (mid-week)
+
+**Current progress:**
+Implemented `_has_tests()` in `agent/tools/github_tool.py` following the same pattern as `_has_readme` — probes the GitHub Contents API for `tests/`, `test/`, and `pytest.ini`, short-circuiting on first match. Wired `has_tests` into `_fetch_repo_metadata`. All 4 reproduction tests now pass. The directory-path HEAD concern from Week 8 turned out to be a non-issue: the Contents API returns 200 for directories just like files.
+
+**Next steps:**
+Open draft PR, fill in PR template, get peer feedback, then mark ready for review.
+
+**Blockers:**
+None.
+
+---
+
+### Check-in 2 (end of week)
+
+**PR link:** [to be added after PR is opened]
+
+**Branch:** `feat/50-has-tests-boolean`
+
+**What you built:**
+Added a `_has_tests()` method to `GitHubTool` that probes the GitHub Contents API for common test indicators (`tests/`, `test/`, `pytest.ini`) and short-circuits on the first match to keep extra API calls minimal. The result is wired into `_fetch_repo_metadata` alongside the existing `has_readme` field.
+
+**Tests added or updated:**
+`tests/unit/test_github_tool.py` — 4 tests covering: field presence in output, `True` when `tests/` exists, `False` when no test infrastructure found, and all required fields present together.
+
+**Self-review confirmation:** [x] make check passes (my files)  [x] make test-unit passes (my tests; 53 pre-existing failures unrelated to this change)
+
+**Draft PR feedback received from:** none yet
