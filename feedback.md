@@ -1,19 +1,19 @@
-# Tinker Feedback — Week 8
+# Tinker Feedback — Week 9
 
 ## Were you able to complete this week's Tinker? *
-- [ ] Yes, fully
-- [x] Yes, with workarounds
+- [x] Yes, fully
+- [ ] Yes, with workarounds
 - [ ] No
 
 ### If you hit a blocker or used a workaround, what was it?
-Switching issues mid-week meant re-reading the codebase from scratch, but tracing `GitHubTool` and `RepoAnalyzer` side-by-side made the gap obvious pretty quickly.
+
 
 ---
 
 ## Roughly how long did the Tinker take you?
 - [ ] Under 30 min
-- [x] 30–60 min
-- [ ] 1–2 hours
+- [ ] 30–60 min
+- [x] 1–2 hours
 - [ ] More than 2 hours
 
 ---
@@ -38,8 +38,8 @@ _Not ready (1) → Fully ready (5)_
 ---
 
 ## What worked well?
-The codebase is really well-structured — `_has_readme` in `github_tool.py` is basically a blueprint for the fix, so students can pattern-match off existing code without needing a ton of guidance.
+Having a clear existing pattern to follow (`_has_readme`) made the implementation really straightforward — once I understood how it worked, writing `_has_tests` was mostly just adapting the same structure.
 
 ## What would you change?
-It'd help to note in the issue that `repo_analyzer.py` lives in `ingestion/parsers/` not `agent/tools/` — the issue body references it but the path is wrong, which could send students searching in the wrong place.
+It would help to explicitly tell students to check for pre-existing test/lint failures before starting, so they don't spend time trying to fix unrelated issues when `make check` comes back with 180+ errors.
 
