@@ -52,7 +52,7 @@ None.
 
 ### Check-in 2 (end of week)
 
-**PR link:** [to be added after PR is opened]
+**PR link:** https://github.com/avnigirish/pathreview/pull/1
 
 **Branch:** `feat/50-has-tests-boolean`
 
