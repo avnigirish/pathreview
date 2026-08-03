@@ -1,4 +1,4 @@
-# Tinker Feedback — Week 9
+# Tinker Feedback — Week 10
 
 ## Were you able to complete this week's Tinker? *
 - [x] Yes, fully
@@ -12,8 +12,8 @@
 
 ## Roughly how long did the Tinker take you?
 - [ ] Under 30 min
-- [ ] 30–60 min
-- [x] 1–2 hours
+- [x] 30–60 min
+- [ ] 1–2 hours
 - [ ] More than 2 hours
 
 ---
@@ -38,8 +38,8 @@ _Not ready (1) → Fully ready (5)_
 ---
 
 ## What worked well?
-Having a clear existing pattern to follow (`_has_readme`) made the implementation really straightforward — once I understood how it worked, writing `_has_tests` was mostly just adapting the same structure.
+The reflection prompts were really well scoped — specific enough that there was something concrete to say for each one, but open enough that the answers felt genuine rather than formulaic.
 
 ## What would you change?
-It would help to explicitly tell students to check for pre-existing test/lint failures before starting, so they don't spend time trying to fix unrelated issues when `make check` comes back with 180+ errors.
+It'd help to remind students to baseline `make check` failures before they start coding — a lot of them probably panic when they see 180 errors and don't realize none of them are theirs.
 
